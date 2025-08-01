@@ -70,6 +70,9 @@
                     <button type="button" class="btn btn-outline-warning me-3" id="editBtn">
                         <i class="bi bi-pencil-fill me-1"></i>수정
                     </button>
+                    <button type="button" class="btn btn-outline-success me-3" id="goListBtn">
+                        <i class="bi bi-card-list me-1"></i>목록
+                    </button>
                 </div>
 
             </div>
@@ -108,6 +111,10 @@
         });
 
         document.getElementById('goList').addEventListener('click', function () {
+            location.href = '../notice/list.html';
+        });
+
+        document.getElementById('goListBtn').addEventListener('click', function () {
             location.href = '../notice/list.html';
         });
 

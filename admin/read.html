@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1">
-    <title>default</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>회원 상세정보</title>
 
     <!-- bootstrap v5.3 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
@@ -24,26 +24,127 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success sticky-top">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand fs-2">북북노벨</a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+        <div class="container-fluid container-xl">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-white" href="home.html">자유</a>
+                    <a class="nav-link text-white" href="ranking.html">랭킹</a>
+                    <a class="nav-link text-white" href="../user_board/free_list.html">유저 게시판</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 본문 -->
+    <div class="container">
+        <!-- 카드 -->
+        <div class="card m-2">
+            <div class="card-header fs-3 text-center"><b>회원 상세정보</b></div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>회원번호</b></div>
+                    <div class="col-9 border-top p-2 mt-2">01</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>이름</b></div>
+                    <div class="col-9 border-top p-2 mt-2">백병렬</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>아이디</b></div>
+                    <div class="col-9 border-top p-2 mt-2">govl5679</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>닉네임</b></div>
+                    <div class="col-9 border-top p-2 mt-2">난카푸치노</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>성별</b></div>
+                    <div class="col-9 border-top p-2 mt-2">남자</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>생년월일</b></div>
+                    <div class="col-9 border-top p-2 mt-2">1996-08-19</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>연락처</b></div>
+                    <div class="col-9 border-top p-2 mt-2">010-7735-9765</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>이메일</b></div>
+                    <div class="col-9 border-top p-2 mt-2">govl5679@gmail.com</div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-3 border-top p-2 mt-2"><b>포인트/쿠키</b></div>
+                    <div class="col-9 border-top p-2 mt-2">5개</div>
+                </div>
+                <div class="d-flex bg-light">
+                    <div class="col-3 border-top p-2 mt-2"><b>가입일시</b></div>
+                    <div class="col-9 border-top p-2 mt-2">2025-08-01 15:50</div>
+                </div>
+                <div class="d-flex bg-light">
+                    <div class="col-3 border-top p-2 mt-2"><b>최종접속일시</b></div>
+                    <div class="col-9 border-top p-2 mt-2">2025-08-01 16:01</div>
+                </div>
+                <div class="d-flex bg-light">
+                    <div class="col-3 border-top p-2 mt-2"><b>회원등급</b></div>
+                    <div class="col-9 border-top p-2 mt-2">
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">일반 회원</option>
+                            <option value="2" selected>관리자</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //카드 -->
+            <!-- 버튼 -->
+            <div class="m-3 text-end">
+                <button type="button" class="btn btn-success" onclick="save();">수정사항 반영</button>
+                <button type="button" class="btn btn-warning" onclick="goToPage('user_list.html');">목록</button>
+            </div>
+            <!-- //버튼 -->
+        </div>
+        <!-- //본문 -->
 
-    <!-- bootstrap v5.3 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"
-        integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- jquery v3.7.1 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- bootstrap v5.3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"
+            integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- jquery toast plugin v1.3.2 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
-        integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- jquery v3.7.1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- custom -->
-    <script>
+        <!-- jquery toast plugin v1.3.2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
+            integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    </script>
+        <!-- custom -->
+        <script>
+            // 변경사항 저장
+            function save() {
+                confirm('저장하시겠습니까?');
+            }
+
+            // 페이지 이동
+            function goToPage(url) {
+                window.location.href = url;
+            }
+
+        </script>
 
 </body>
 
