@@ -25,27 +25,27 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success sticky-top">
-        <div class="container-fluid container-xl">
-            <a class="navbar-brand fs-2">북북노벨</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success sticky-top flex-column">
+        <div class="container-fluid container-xl d-flex">
+            <div class="align-item">
+                <a class="navbar-brand fs-2"><i class="bi bi-book me-2"></i>북북노벨</a>
+                <div class="navbar-nav">
+                    <a class="nav-link text-white" href="../home/home.html">자유</a>
+                    <a class="nav-link text-white" href="../home/ranking.html">랭킹</a>
+                    <a class="nav-link text-white" href="../user_board/free_list.html">유저 게시판</a>
+                    <a class="nav-link text-white" href="../notice/list.html">공지사항</a>
+                </div>
+            </div>
+
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
+
+            <i class="bi bi-circle-fill text-white"></i>
         </div>
     </nav>
-    <!-- //navbar -->
-    <nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top">
-        <div class="container-fluid container-xl">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link text-white" href="home.html">자유</a>
-                    <a class="nav-link text-white" href="ranking.html">랭킹</a>
-                    <a class="nav-link text-white" href="../user_board/free_list.html">유저 게시판</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- navbar -->
 
 
     <!-- bootstrap v5.3 -->
