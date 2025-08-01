@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>로그인 | 북북노벨</title>
+  <style>
+    body {
+      background: #f8fcf7;
+      margin: 0;
+      font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+    }
+
+    /* ─── 상단 통통 찐초록 네브바 ─── */
+    .topbar {
+      width: 100vw;
+      background: #23723a; /* 진한 초록색 */
+      height: 80px; /* 통통하게 */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2.5px solid #155827;
+      box-shadow: 0 4px 18px #acd5b3a0;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      transition: height 0.2s;
+    }
+    .logo {
+      font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+      font-size: 34px;
+      font-weight: 900;
+      color: #fff;
+      margin-left: 46px;
+      letter-spacing: 3px;
+      text-shadow: 0 2.5px 7px #183a2266, 0 0 0 #1a3321;
+      user-select: none;
+      line-height: 1;
+    }
+    .topmenu {
+      margin-right: 70px; /* 오른쪽 여백 넉넉하게 */
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+    }
+    .topmenu a {
+      color: #e3ffd8;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: 10px;
+      transition: background 0.16s, color 0.17s, box-shadow 0.16s;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+    }
+    .topmenu a:hover,
+    .topmenu .current {
+      background: #175220;
+      color: #fffbe8;
+      box-shadow: 0 2px 10px #16856a22;
+    }
+
+    /* 검색창 디자인 */
+    .topmenu form {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+    .topmenu input[type='text'] {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 7px 0 0 7px;
+      height: 46px;
+      background: #f1fff0;
+      font-size: 17px;
+      width: 170px;
+      outline: none;
+      margin-right: -4px;
+      box-shadow: inset 0 1px 6px #92d69422;
+      transition: background 0.16s;
+    }
+    .topmenu input[type='text']:focus {
+      background: #e2f7db;
+    }
+    .topmenu button[type='submit'] {
+      height: 46px;
+      padding: 0 27px;
+      border: none;
+      border-radius: 0 7px 7px 0;
+      background: #19ae3a;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 17px;
+      transition: background 0.18s;
+      margin-left: 0;
+      box-shadow: inset 0 1px 6px #92d69422;
+    }
+    .topmenu button[type='submit']:hover {
+      background: #126e27;
+    }
+
+    /* ─── 로그인 박스 UI (가운데 유지 + 오른쪽 40px 띄움) ─── */
+    .login-box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 3px 15px 0 #a8e0b4;
+      border: 2.5px solid #1f9442;
+      width: 370px;
+      margin: 80px auto 0 auto;
+      padding: 45px 40px 36px 40px;
+      transform: translateX(40px);
+      transition: transform 0.3s;
+    }
+    h2 {
+      color: #23723a;
+      margin-bottom: 28px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    label {
+      color: #198840;
+      font-weight: 700;
+      font-size: 1.05em;
+    }
+
+    /* 아이디, 비밀번호 인풋과 버튼 모두 같은 너비, 균형 맞춤 */
+    input[type='text'],
+    input[type='password'],
+    .submit-btn {
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    input[type='text'],
+    input[type='password'] {
+      padding: 13px 16px;
+      border: 2px solid #159f35;
+      margin-bottom: 16px;
+      background: #fafdf9;
+      transition: border 0.15s, background 0.15s;
+    }
+    input:focus {
+      border: 2.5px solid #23723a;
+      outline: none;
+      background: #e7ffe6;
+    }
+    .submit-btn {
+      padding: 13px 0;
+      background: #198840;
+      color: #fff;
+      border: none;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 7px;
+      transition: background 0.23s;
+      text-align: center;
+      box-shadow: 0 2px 7px #99e29338;
+    }
+    .submit-btn:hover {
+      background: #145221;
+    }
+
+    .links {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .links a {
+      color: #159f35;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 10px;
+      transition: color 0.13s;
+    }
+    .links a:hover {
+      color: #23723a;
+      text-decoration: underline;
+    }
+
+    /* 반응형 (모바일) */
+    @media (max-width: 700px) {
+      .login-box {
+        width: 95vw;
+        margin: 38px auto 0 auto;
+        padding: 12vw 4vw 5vw 4vw;
+        transform: none; /* 중앙 유지 */
+      }
+      .topbar {
+        height: 56px;
+      }
+      .logo {
+        margin-left: 14px;
+        font-size: 21px;
+      }
+      .topmenu {
+        margin-right: 20px;
+        gap: 10px;
+      }
+      .topmenu a {
+        padding: 7px 10px;
+        font-size: 15px;
+      }
+      .topmenu input[type='text'] {
+        width: 64px;
+        font-size: 13px;
+      }
+      .topmenu button[type='submit'] {
+        padding: 0 10px;
+        font-size: 13px;
+        height: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">북북노벨</div>
+    <nav class="topmenu">
+      <a href="login.html" class="current">로그인</a>
+      <a href="resister.html">회원가입</a>
+      <a href="find_userid.html">아이디찾기</a>
+      <a href="find_password.html">비밀번호찾기</a>
+      <form id="searchForm" action="#" method="get">
+        <input type="text" name="query" placeholder="Search" />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+
+  <div class="login-box">
+    <h2>로그인</h2>
+    <form id="loginForm" autocomplete="off">
+      <label for="userid">아이디</label>
+      <input type="text" id="userid" name="userid" required />
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="password" required />
+
+      <button class="submit-btn" type="submit">로그인</button>
+    </form>
+    <div class="links">
+      <a href="resister.html">회원가입</a> |
+      <a href="find_userid.html">아이디찾기</a> |
+      <a href="find_password.html">비밀번호찾기</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    // 로그인 폼 처리
+    $("#loginForm").on("submit", function(e) {
+      e.preventDefault();
+      $.post("/api/auth/login", $(this).serialize())
+        .done(function(res) {
+          alert("로그인 성공!");
+          // 로그인 성공 후 리디렉션 등 로직 추가
+        })
+        .fail(function() {
+          alert("로그인 실패! 아이디/비밀번호를 확인하세요.");
+        });
+    });
+
+    // 검색 폼 (데모용)
+    $("#searchForm").on("submit", function(e) {
+      e.preventDefault();
+      alert("검색기능은 구현 예시입니다!");
+    });
+  </script>
+</body>
+</html>
