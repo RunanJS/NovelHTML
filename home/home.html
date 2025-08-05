@@ -4,20 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device=width, initial-scale=1">
-    <title>HOME</title>
+    <title>홈 | 북북노벨</title>
 
     <!-- bootstrap v5.3 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
-        integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- bootstrap icons 1.13.1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- jquery toast plugin v1.3.2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
-        integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* 사용자 정의 스타일 (주석) */
     </style>
@@ -25,45 +25,103 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success sticky-top flex-column">
+    <nav class="navbar navbar-expand-lg d-flex flex-column fixed-top bg-white sticky-top">
 
-        <div class="container-fluid container-xl">
-            <div class="">
-                <a class="navbar-brand fs-2"><i class="bi bi-book me-2"></i>북북노벨</a>
-                <div class="navbar-nav">
-                    <a class="nav-link text-white" href="../home/home.html">자유</a>
-                    <a class="nav-link text-white" href="../home/ranking.html">랭킹</a>
-                    <a class="nav-link text-white" href="../user_board/free_list.html">유저 게시판</a>
-                    <a class="nav-link text-white" href="../notice/list.html">공지사항</a>
-                </div>
+        <div class="container row py-3">
+            <!--북북노벨 타이틀-->
+            <div class="navbar-nav col-3">
+                <a class="navbar-brand fs-2 fw-bold" href="../home/home.html">
+                    <i class="bi bi-book me-2 fs-1 text-success"></i>북북노벨
+                </a>
             </div>
-
-                <div class="input-group w-50">
-                    <input type="text" class="form-control" placeholder="Recipient’s username"
-                        aria-label="Recipient’s username" aria-describedby="button-addon2">
-                    <button class="btn btn-light" type="button" id="button-addon2">Button</button>
-                </div>
-                <i class="bi bi-person-circle text-white fs-2 ms-3"></i>
-
+            <!--검색창-->
+            <div class="navbar-nav col-8">
+                <form class="input-group" action="../home/search.html">
+                    <input type="text" class="form-control" placeholder="Recipient’s username" id="">
+                    <button class="btn btn-outline-light p-3" type="submit" id="search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- 프로필 -->
+            <div class="navbar-nav col-1 d-flex justify-content-end">
+                <i class="bi bi-person-circle fs-2 ms-3"></i>
+            </div>
+        </div>
+        <div class="border-top col-12 border-success"></div>
+        <!-- 목록 -->
+        <div class="container navbar-nav d-flex justify-content-start py-3 fs-5">
+            <a class="nav-link text-dark me-2" href="../home/home.html">자유</a>
+            <a class="nav-link text-dark me-2" href="../home/ranking.html">랭킹</a>
+            <a class="nav-link text-dark me-2" href="../user_board/free_list.html">유저 게시판</a>
+            <a class="nav-link text-dark me-2" href="../notice/list.html">공지사항</a>
         </div>
     </nav>
     <!-- navbar -->
 
+    <div class="col-12">
+        <img src="https://picsum.photos/1200/400" class="card-img-top" alt="이미지를 불러오지 못 했습니다.">
+    </div>
+
+    <div class="d-flex justify-content-around mt-5">
+        <div class="container-xl row">
+            <!--콘텐츠1-->
+            <!-- 웹에서 여기에 마우스 올리면 title에 쓴게 뜸 -->
+            <div class="card col-4 border-0 mt-5" title="전생했더니 액체괴물이었던 건에 대하여" name="novel">
+                <div class="card-body row">
+                    <!-- 이미지부 -->
+                    <div class="col-4">
+                        <img src="https://picsum.photos/400/600" class="card-img" alt="이미지를 불러오지 못 했습니다.">
+                    </div>
+                    <!-- 글씨부 -->
+                    <div class="ms-3 col align-self-center">
+                        <div class="fs-4 fw-bold d-inline-block text-truncate"
+                             style="max-width: 200px;">전생했더니 액체괴물이었던 건에 대해서</div>
+                        <div class="mt-2 text-secondary">포풍저그</div>
+                        <div class="mt-4 text-primary">판타지 먼치킨</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--콘텐츠1-->
+            <!-- 웹에서 여기에 마우스 올리면 title에 쓴게 뜸 -->
+            <div class="card col-4 border-0 mt-5" title=>
+                <div class="card-body row">
+                    <!-- 이미지부 -->
+                    <div class="col-4">
+                        <img src="https://picsum.photos/400/600" class="card-img" alt="이미지를 불러오지 못 했습니다.">
+                    </div>
+                    <!-- 글씨부 -->
+                    <div class="ms-3 col align-self-center">
+                        <div class="fs-4 fw-bold d-inline-block text-truncate"
+                             style="max-width: 200px;">전생했더니 액체괴물이었던 건에 대해서</div>
+                        <div class="mt-2 text-secondary">포풍저그</div>
+                        <div class="mt-4 text-primary">판타지 먼치킨</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
 
     <!-- bootstrap v5.3 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"
-        integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- jquery v3.7.1 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- jquery toast plugin v1.3.2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
-        integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- custom -->
     <script>
