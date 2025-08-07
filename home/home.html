@@ -59,12 +59,40 @@
     </nav>
     <!-- navbar -->
 
-    <div class="col-12">
-        <img src="https://picsum.photos/1200/400" class="card-img-top" alt="이미지를 불러오지 못 했습니다.">
+    <!-- 배너 -->
+    <div class="">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/1200/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1200/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1200/300" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
     </div>
 
+    <!-- 작품 모음 -->
     <div class="d-flex justify-content-around mt-5">
-        <div class="container-xl row">
+        <div class="container-xxl row">
             <!--콘텐츠1-->
             <!-- 웹에서 여기에 마우스 올리면 title에 쓴게 뜸 -->
             <div class="card col-4 border-0 mt-5" title="전생했더니 액체괴물이었던 건에 대하여" name="novel">
@@ -75,7 +103,7 @@
                     </div>
                     <!-- 글씨부 -->
                     <div class="ms-3 col align-self-center">
-                        <div class="fs-4 fw-bold d-inline-block text-truncate"
+                        <div class="fs-5 fw-bold d-inline-block text-truncate"
                              style="max-width: 200px;">전생했더니 액체괴물이었던 건에 대해서</div>
                         <div class="mt-2 text-secondary">포풍저그</div>
                         <div class="mt-4 text-primary">판타지 먼치킨</div>
@@ -83,9 +111,9 @@
                 </div>
             </div>
 
-            <!--콘텐츠1-->
+            <!--콘텐츠2-->
             <!-- 웹에서 여기에 마우스 올리면 title에 쓴게 뜸 -->
-            <div class="card col-4 border-0 mt-5" title=>
+            <div class="card col-4 border-0 mt-5" title="이 실없이 멋진 세계에 축복을">
                 <div class="card-body row">
                     <!-- 이미지부 -->
                     <div class="col-4">
@@ -93,10 +121,28 @@
                     </div>
                     <!-- 글씨부 -->
                     <div class="ms-3 col align-self-center">
-                        <div class="fs-4 fw-bold d-inline-block text-truncate"
-                             style="max-width: 200px;">전생했더니 액체괴물이었던 건에 대해서</div>
-                        <div class="mt-2 text-secondary">포풍저그</div>
-                        <div class="mt-4 text-primary">판타지 먼치킨</div>
+                        <div class="fs-5 fw-bold d-inline-block text-truncate"
+                             style="max-width: 200px;">이 실없이 멋진 세계에 축복을</div>
+                        <div class="mt-2 text-secondary">백수돚거</div>
+                        <div class="mt-4 text-primary">판타지 개그</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--콘텐츠3-->
+            <!-- 웹에서 여기에 마우스 올리면 title에 쓴게 뜸 -->
+            <div class="card col-4 border-0 mt-5" title="이 실없이 멋진 세계에 축복을">
+                <div class="card-body row">
+                    <!-- 이미지부 -->
+                    <div class="col-4">
+                        <img src="https://picsum.photos/400/600" class="card-img" alt="이미지를 불러오지 못 했습니다.">
+                    </div>
+                    <!-- 글씨부 -->
+                    <div class="ms-3 col align-self-center">
+                        <div class="fs-5 fw-bold d-inline-block text-truncate"
+                             style="max-width: 200px;">이 실없이 멋진 세계에 축복을</div>
+                        <div class="mt-2 text-secondary">백수돚거</div>
+                        <div class="mt-4 text-primary">판타지 개그</div>
                     </div>
                 </div>
             </div>
